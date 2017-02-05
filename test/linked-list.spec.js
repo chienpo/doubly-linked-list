@@ -1,6 +1,7 @@
 const Node = require('../src/node');
 const LinkedList = require('../src/linked-list');
 
+
 describe('LinkedList', () => {
     describe('#constructor', () => {
         const list = new LinkedList();
@@ -10,16 +11,18 @@ describe('LinkedList', () => {
         })
     });
 
+
+
     describe('#append', () => {
         it('should assign any nodes to this._head and this._tail if list is empty', () => {
             const data = 42;
 
             const list = new LinkedList();
-
+            // expect(list.length).to.equal(0);
             list.append(data);
 
-            expect(list._tail).to.be.an.instanceof(Node)
-            expect(list._head).to.be.an.instanceof(Node)
+           expect(list._tail).to.be.an.instanceof(Node)
+           expect(list._head).to.be.an.instanceof(Node)
         });
 
         it('should add new data to the end of list', () => {
@@ -34,6 +37,9 @@ describe('LinkedList', () => {
         });
 
     });
+
+
+
     describe('#head', () => {
         const list = new LinkedList();
         it('should return data from the this.head', () => {
